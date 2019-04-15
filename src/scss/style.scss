@@ -1,0 +1,100 @@
+@import "common.scss";
+@import "_mixin.scss";
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        width: 100%;
+        height: px2rem(44px);
+        background: #fafafa;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        h2 {
+            font-size: px2rem(38px);
+            color: red;
+            font-weight: bold;
+        }
+        i {
+            font-size: px2rem(18px);
+            text-align: center;
+            width: px2rem(44px);
+            height: px2rem(44px);
+            line-height: px2rem(44px)
+        }
+    }
+    .main {
+        width: 100%;
+        flex: 1;
+        overflow-y: scroll;
+        ul {
+            display: flex;
+            width: 100%;
+            height: px2rem(30px);
+            background: red;
+            // flex-wrap: wrap;
+            overflow-x: scroll;
+            li {
+                flex-shrink: 0;
+                text-align: center;
+                line-height: px2rem(30px);
+                color: #fff;
+                font-size: px2rem(15px);
+                margin-right: px2rem(30px)
+            }
+        }
+        .banner {
+            width: 100%;
+            height: px2rem(200px);
+            display: flex;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .list {
+            width: 100%;
+            height: px2rem(150px);
+            ol {
+                width: 100%;
+                height: px2rem(40px);
+                border-bottom: 1px solid #ccc;
+                display: flex;
+                justify-content: space-between;
+                li {
+                    font-size: px2rem(16px);
+                    line-height: px2rem(40px);
+                    color: black;
+                    padding: 0 px2rem(10px)
+                }
+            }
+        }
+        .box {
+            width: 100%;
+            height: auto;
+            //overflow-y: scroll;
+            .cont {
+                width: 100%;
+                height: px2rem(70px);
+                border-bottom: 1px solid #ccc;
+                dl {
+                    display: flex;
+                    padding: 0 px2rem(10px);
+                    dd {
+                        img {
+                            width: px2rem(60px);
+                            height: px2rem(60px);
+                        }
+                    }
+                    dt {
+                        font-size: px2rem(20px);
+                        margin-left: px2rem(20px);
+                        line-height: px2rem(70px)
+                    }
+                }
+            }
+        }
+    }
+}
