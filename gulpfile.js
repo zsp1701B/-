@@ -4,6 +4,7 @@ let scss = require('gulp-sass');
 let js = require('gulp-uglify');
 let fs = require('fs');
 let path = require('path')
+let server = require('gulp-webserver')
 
 gulp.task('css', () => {
     return gulp.src('./src/css/*.css')
@@ -12,19 +13,20 @@ gulp.task('css', () => {
         .pipe(dest('./dist/css'))
 })
 
-gulp.js('js', () => {
+gulp.task('js', () => {
     return gulp.src('./src/js/*.js')
         .pipe(js())
         .pipe(concat('main.min.js'))
         .pipe(dest('./dist/js'))
 })
 
-gulp.img('img', () => {
+gulp.task('img', () => {
     return gulp.src('src/img/*.jpg')
         .pipe(img())
         .pipe(dest('./dist/img'))
 })
 
-gulp.webserver('server', () => {
-
+gulp.webServer('server', () => {
+    host: '8080',
+    leaverload: true
 })
